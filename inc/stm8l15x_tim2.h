@@ -2,11 +2,14 @@
   ******************************************************************************
   * @file    stm8l15x_tim2.h
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file contains all the functions prototypes for the TIM2 firmware
   *          library.
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -20,7 +23,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************  
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -328,8 +331,8 @@ typedef enum
   TIM2_TRGSelection_TIM3     = ((uint8_t)0x20),  /*!< TRIG Input source =  TIM TRIG Output  */
   TIM2_TRGSelection_TIM5     = ((uint8_t)0x30),  /*!< TRIG Input source =  TIM TRIG Output  */
   TIM2_TRGSelection_TI1F_ED  = ((uint8_t)0x40),  /*!< TRIG Input source = TI1F_ED (TI1 Edge Detector)  */
-  TIM2_TRGSelection_TI1FP1   = ((uint8_t)0x50),  /*!< TRIG Input source = TI1FP1 (Filtred Timer Input 1) */
-  TIM2_TRGSelection_TI2FP2   = ((uint8_t)0x60),  /*!< TRIG Input source = TI2FP2 (Filtred Timer Input 2)  */
+  TIM2_TRGSelection_TI1FP1   = ((uint8_t)0x50),  /*!< TRIG Input source = TI1FP1 (Filtered Timer Input 1) */
+  TIM2_TRGSelection_TI2FP2   = ((uint8_t)0x60),  /*!< TRIG Input source = TI2FP2 (Filtered Timer Input 2)  */
   TIM2_TRGSelection_ETRF     = ((uint8_t)0x70)   /*!< TRIG Input source =  ETRF (External Trigger Input ) */
 }TIM2_TRGSelection_TypeDef;
 

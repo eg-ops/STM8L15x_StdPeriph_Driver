@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm8l15x_dma.c
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file provides all the DMA firmware functions.
  * @brief   This file provides firmware functions to manage the following 
   *          functionalities of the Direct Memory Access controller (DMA):           
@@ -30,7 +30,7 @@
   *             and the Memory-to-Memory transfer mode (for channel 3 only, 
   *             if needed) using the DMA_Init() function.
   *
-  *          4. Enable the the corresponding interrupt(s) using the function 
+  *          4. Enable the corresponding interrupt(s) using the function 
   *             DMA_ITConfig() if you need to use DMA interrupts. 
   *
   *          5. Enable the DMA channel using the DMA_Cmd() function. 
@@ -63,6 +63,9 @@
   *  @endverbatim
   *                                  
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -76,7 +79,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************
   */ 
 
 /* Includes ------------------------------------------------------------------*/

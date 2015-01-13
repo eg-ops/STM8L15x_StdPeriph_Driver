@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm8l15x_rst.c
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file provides firmware functions to manage the following 
   *          functionalities of the RST peripheral:
   *           - Flag management
@@ -30,6 +30,9 @@
   *  @endverbatim
   *    
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -43,7 +46,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************  
   */
 
 /* Includes ------------------------------------------------------------------*/
@@ -99,8 +102,7 @@ FlagStatus RST_GetFlagStatus(RST_FLAG_TypeDef RST_Flag)
   assert_param(IS_RST_FLAG(RST_Flag));
 
   /* Get flag status */
-
-  return ((FlagStatus)((uint8_t)RST->SR & (uint8_t)RST_Flag));
+  return((FlagStatus)(((uint8_t)(RST->SR & RST_Flag) == (uint8_t)0x00) ? RESET : SET));
 }
 
 /**

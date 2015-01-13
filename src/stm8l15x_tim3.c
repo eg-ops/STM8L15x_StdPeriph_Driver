@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm8l15x_tim3.c
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file provides firmware functions to manage the following 
   *          functionalities of the TIM3 peripheral:
   *            - TimeBase management
@@ -19,7 +19,7 @@
   *          ===================================================================
   *                                 How to use this driver
   *          ===================================================================
-  *          This driver provides functions to configure and initialise the TIM3
+  *          This driver provides functions to configure and initialize the TIM3
   *          peripheral
   *          These functions are split in 7 groups: 
   *   
@@ -81,6 +81,9 @@
   *  @endverbatim
   *    
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -94,7 +97,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
@@ -764,7 +767,7 @@ void TIM3_BKRConfig(TIM3_OSSIState_TypeDef TIM3_OSSIState,
 
 
 
-  /* Set the Lock level, the Break enable Bit and the Ploarity, the OSSI State,
+  /* Set the Lock level, the Break enable Bit and the Polarity, the OSSI State,
   the dead time value and the Automatic Output Enable Bit */
   TIM3->BKR = (uint8_t)((uint8_t)((uint8_t)((uint8_t)((uint8_t)TIM3_OSSIState | (uint8_t)TIM3_LockLevel) | \
                                   (uint8_t)((uint8_t)TIM3_BreakState | (uint8_t)TIM3_BreakPolarity)) | \
@@ -1788,8 +1791,8 @@ void TIM3_ETRClockMode2Config(TIM3_ExtTRGPSC_TypeDef TIM3_ExtTRGPrescaler,
   *            @arg TIM3_TRGSelection_TIM3: TRIG Input source =  TIM TRIG Output
   *            @arg TIM3_TRGSelection_TIM2: TRIG Input source =  TIM TRIG Output
   *            @arg TIM3_TRGSelection_TI1F_ED: TRIG Input source = TI1F_ED (TI1 Edge Detector)
-  *            @arg TIM3_TRGSelection_TI1FP1: TRIG Input source = TI1FP1 (Filtred Timer Input 1)
-  *            @arg TIM3_TRGSelection_TI2FP2: TRIG Input source = TI2FP2 (Filtred Timer Input 2)
+  *            @arg TIM3_TRGSelection_TI1FP1: TRIG Input source = TI1FP1 (Filtered Timer Input 1)
+  *            @arg TIM3_TRGSelection_TI2FP2: TRIG Input source = TI2FP2 (Filtered Timer Input 2)
   *            @arg TIM3_TRGSelection_ETRF: TRIG Input source =  ETRF (External Trigger Input )      
   * @retval None
   */

@@ -2,11 +2,14 @@
   ******************************************************************************
   * @file    stm8l15x.h
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file contains all the peripheral register's definitions, bits
   *          definitions and memory mapping for STM8L15x devices.
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -20,7 +23,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************  
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -189,7 +192,7 @@ defined (STM8L05X_LD_VL) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
 /*!< [31:16] STM8L15X Standard Peripheral Library main version */
 #define __STM8L15X_STDPERIPH_VERSION_MAIN   ((uint8_t)0x01) /*!< [31:24] main version */                                  
 #define __STM8L15X_STDPERIPH_VERSION_SUB1   ((uint8_t)0x06) /*!< [23:16] sub1 version */
-#define __STM8L15X_STDPERIPH_VERSION_SUB2   ((uint8_t)0x00) /*!< [15:8]  sub2 version */
+#define __STM8L15X_STDPERIPH_VERSION_SUB2   ((uint8_t)0x01) /*!< [15:8]  sub2 version */
 #define __STM8L15X_STDPERIPH_VERSION_RC     ((uint8_t)0x00) /*!< [7:0]  release candidate */ 
 #define __STM8L15X_STDPERIPH_VERSION       ( (__STM8L15X_STDPERIPH_VERSION_MAIN << 24)\
                                           |(__STM8L15X_STDPERIPH_VERSION_SUB1 << 16)\
@@ -2971,7 +2974,7 @@ Comments :    The different parameters of commands are
               The "MskBit" command allows to select some bits in a source
               variables and copy it in a destination var (return the value).
               The "ValBit" command returns the value of a bit in a char
-              variable: the bit is reseted if it returns 0 else the bit is set.
+              variable: the bit is reset if it returns 0 else the bit is set.
               This method generates not an optimised code yet.
 -----------------------------------------------------------------------------*/
 #define SetBit(VAR,Place)         ( (VAR) |= (uint8_t)((uint8_t)1<<(uint8_t)(Place)) )

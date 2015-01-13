@@ -2,8 +2,8 @@
   ********************************************************************************
   * @file    stm8l15x_wwdg.c
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file provides firmware functions to manage the following 
   *          functionalities of the Window watchdog (WWDG) peripheral:           
   *           - Refresh window and Counter configuration
@@ -27,7 +27,7 @@
   *          Once enabled the WWDG cannot be disabled except by a system reset.
   *          
   *          If the WWDG is activated and the watchdog reset on halt option is 
-  *          selected (Option byte), then the HALT instruction will generate a reset.                               
+  *          selected (Option byte), then the HALT instruction will generate a reset.
   *          
   *          WWDGF flag in RST_SR register can be used to inform when a WWDG
   *          reset occurs.
@@ -52,8 +52,11 @@
   *             programmed using WWDG_SetWindowValue().         
   *
   *  @endverbatim  
-  *                             
+  *
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -67,7 +70,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/

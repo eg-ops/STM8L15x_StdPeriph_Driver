@@ -2,11 +2,14 @@
   ******************************************************************************
   * @file    stm8l15x_flash.h
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file contains all the functions prototypes for the FLASH firmware
   *          library.
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -20,12 +23,12 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************  
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM8L15x_FLASH_H__
-#define __STM8L15x_FLASH_H__
+#ifndef __STM8L15x_FLASH_H
+#define __STM8L15x_FLASH_H
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l15x.h"
@@ -343,7 +346,7 @@ IN_RAM(void FLASH_EraseBlock(uint16_t BlockNum, FLASH_MemType_TypeDef FLASH_MemT
 
 IN_RAM(FLASH_Status_TypeDef FLASH_WaitForLastOperation(FLASH_MemType_TypeDef FLASH_MemType));
 
-#endif /*__STM8L15x_FLASH_H__*/
+#endif /*__STM8L15x_FLASH_H*/
 
 /**
   * @}

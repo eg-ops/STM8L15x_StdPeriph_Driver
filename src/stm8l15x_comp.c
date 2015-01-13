@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    stm8l15x_comp.c
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file provides firmware functions to manage the following 
   *          functionalities of the comparators (COMP1 and COMP2) peripheral: 
   *           - Comparators configuration
@@ -50,6 +50,9 @@
   *             To get the comparator output level, use COMP_GetOutputLevel() function    
   *  @endverbatim      
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -63,7 +66,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
@@ -640,7 +643,7 @@ ITStatus COMP_GetITStatus(COMP_Selection_TypeDef COMP_Selection)
 
   if (COMP_Selection == COMP_Selection_COMP1)
   {
-    /* Get the EF1 comparator event falg status */
+    /* Get the EF1 comparator event flag status */
     itstatus = (uint8_t) (COMP->CSR1 & COMP_CSR1_EF1);
 
     /* Get the IE1 interrupt enable bit status */
@@ -659,7 +662,7 @@ ITStatus COMP_GetITStatus(COMP_Selection_TypeDef COMP_Selection)
   }
   else
   {
-    /* Get the EF2 comparator event falg value */
+    /* Get the EF2 comparator event flag value */
     itstatus = (uint8_t) (COMP->CSR2 & COMP_CSR2_EF2);
 
     /* Get the IE2 interrupt enable bit value */

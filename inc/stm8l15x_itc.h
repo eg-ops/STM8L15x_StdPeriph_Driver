@@ -2,11 +2,14 @@
   ******************************************************************************
   * @file    stm8l15x_itc.h
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file contains all the functions prototypes for the ITC firmware
   *          library.
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -20,12 +23,12 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************  
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM8L15x_ITC_H__
-#define __STM8L15x_ITC_H__
+#ifndef __STM8L15x_ITC_H
+#define __STM8L15x_ITC_H
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l15x.h"
@@ -256,7 +259,7 @@ uint8_t ITC_GetSoftIntStatus(void);
 void ITC_SetSoftwarePriority(IRQn_TypeDef IRQn, ITC_PriorityLevel_TypeDef ITC_PriorityLevel);
 ITC_PriorityLevel_TypeDef ITC_GetSoftwarePriority(IRQn_TypeDef IRQn);
 
-#endif /* __STM8L15x_ITC_H__ */
+#endif /* __STM8L15x_ITC_H */
 
 /**
   * @}

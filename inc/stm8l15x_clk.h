@@ -2,11 +2,14 @@
   ******************************************************************************
   * @file    stm8l15x_clk.h
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file contains all the functions prototypes for the CLK firmware
   *          library.
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -20,7 +23,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************  
   */
 
 
@@ -48,7 +51,7 @@
   * @{
   */
 typedef enum {
-  CLK_HSE_OFF    = (uint8_t)0x00, /*!< HSE Diasble */
+  CLK_HSE_OFF    = (uint8_t)0x00, /*!< HSE Disable */
   CLK_HSE_ON     = (uint8_t)0x01, /*!< HSE Enable */
   CLK_HSE_Bypass = (uint8_t)0x11  /*!< HSE Bypass and enable */
 } CLK_HSE_TypeDef;
@@ -64,7 +67,7 @@ typedef enum {
   * @{
   */
 typedef enum {
-  CLK_LSE_OFF    = (uint8_t)0x00, /*!< LSE Diasble */
+  CLK_LSE_OFF    = (uint8_t)0x00, /*!< LSE Disable */
   CLK_LSE_ON     = (uint8_t)0x04, /*!< LSE Enable */
   CLK_LSE_Bypass = (uint8_t)0x24  /*!< LSE Bypass and enable */
 } CLK_LSE_TypeDef;

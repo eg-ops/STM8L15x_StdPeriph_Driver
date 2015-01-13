@@ -2,10 +2,10 @@
   ******************************************************************************
   * @file    stm8l15x_clk.c
   * @author  MCD Application Team
-  * @version V1.6.0
-  * @date    28-June-2013
+  * @version V1.6.1
+  * @date    30-September-2014
   * @brief   This file provides firmware functions to manage the following 
-  *          functionalities of the clock controler (CLK) peripheral:
+  *          functionalities of the clock controller (CLK) peripheral:
   *           - Internal/external clocks, CSS and CCO configuration
   *           - System clocks configuration
   *           - Peripheral clocks configuration
@@ -36,6 +36,9 @@
   *  @endverbatim
   *    
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -49,7 +52,7 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   *
-  ****************************************************************************** 
+  ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
@@ -176,8 +179,8 @@ void CLK_HSICmd(FunctionalState NewState)
   * @note   The calibration is used to compensate for the variations in voltage
   *         and temperature that influence the frequency of the internal HSI RC.  
   * @param  CLK_HSICalibrationValue : calibration trimming value.
-  *         This parameter must be a number between [(HSICALR regiter value) -12]
-  *         and [(HSICALR regiter value) + 8 ]  
+  *         This parameter must be a number between [(HSICALR register value) -12]
+  *         and [(HSICALR register value) + 8 ]  
   * @note   Once HSITRIMR register configured, its value is used instead of the HSICALR
   *         register values. 
   * @retval None
@@ -503,7 +506,7 @@ uint32_t CLK_GetClockFreq(void)
   tmp = (uint8_t)(CLK->CKDIVR & CLK_CKDIVR_CKM);
   presc = SYSDivFactor[tmp];
 
-  /* Get System clock clcok frequency */
+  /* Get System clock frequency */
   clockfrequency = sourcefrequency / presc;
 
   return((uint32_t)clockfrequency);
